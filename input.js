@@ -1,3 +1,4 @@
+
 const handleUserInput = (key) => {
   if (key === 'w') {
     connection.write("Move: up");
@@ -11,4 +12,8 @@ const setupInput = function () {
   stdin.resume();
   stdin.on('data', handleUserInput);
   return stdin;
+};
+
+module.exports = {
+  setupInput 
 };
